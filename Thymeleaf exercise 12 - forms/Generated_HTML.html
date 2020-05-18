@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Thymeleaf tutorial: exercise 12</title>
+        <link rel="stylesheet" href="css/main.css" />
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <h1>Thymeleaf tutorial - Solution for exercise 12: forms</h1>
+        <h2>Customer edition</h2>
+        <form action="/exercise12/saveCustomer.html" method="post">
+            <input type="hidden" id="id" name="id" value="1085" />
+            
+            <label for="firstName">First name:</label>
+            <input type="text" value="Peter" id="firstName" name="firstName" />
+            
+            <label for="lastName">Last name:</label>
+            <input type="text" value="Jackson" id="lastName" name="lastName" />
+            
+            Genre:
+            <div class="radio">
+                <input type="radio" value="FEMALE" id="gender1" name="gender" />
+                <label for="gender1">Female gender</label>
+            </div>
+            <div class="radio">
+                <input type="radio" value="MALE" id="gender2" name="gender" checked="checked" />
+                <label for="gender2">Male gender</label>
+            </div>
+            
+            
+            <label for="paymentMethod">Payment method:</label>
+            <select id="paymentMethod" name="paymentMethod">
+                <option value="CREDIT_CARD">Credit card payment</option>
+                <option value="DIRECT_DEBIT" selected="selected">Direct debit payment</option>
+                <option value="BANK_TRANSFER">Bank transfer payment</option>
+                
+                
+            </select>
+            
+            <label for="balance">Balance (dollars):</label>
+            <input type="text" size="10" value="2500000" id="balance" name="balance" />
+            
+            <input type="submit" />
+        </form>
+    </body>
+</html>
